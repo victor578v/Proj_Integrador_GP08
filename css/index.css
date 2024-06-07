@@ -1,0 +1,173 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; 
+    margin-top: 2vw;
+
+}
+
+.banner h1 {
+    margin-left: 10vw;
+    margin-bottom: 1vw;
+    font-size: 2vw;
+}
+
+.banner img {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2vw;
+    width: 80%;
+    border: 0.1vw solid grey;
+    padding: 1vw;
+    border-radius: 30px;
+    background-color: lightgray;
+}
+
+.content h1 {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+}
+
+.content p {
+    width: 80%;
+    font-size: 1vw;
+}   
+
+.beneficios {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.beneficios h1 {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.beneficios p {
+    margin-bottom: 1vw;
+}
+
+.beneficios div {
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    border: 0.1vw solid grey;
+    border-radius: 20px;
+    padding: 1vw;
+}
+
+.beneficios h1 {
+    font-size: 2vw;
+}
+
+.beneficios p {
+    font-size: 1vw;
+}
+
+.beneficios ul{
+    list-style: inside;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.beneficios ul li {
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    font-size: 1vw;
+}
+
+@media (max-width: 900px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto; 
+        margin-top: 2vw;
+    
+    }
+    
+    .banner h1 {
+        text-align: center;
+        margin-left: 0vw;
+        margin-bottom: 1vw;
+        font-size: 5vw;
+    }
+    
+    .banner img {
+        margin: 0 auto;
+        width: 80%;
+    }
+    
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 4vw;
+        width: 80%;
+        border: 0.1vw solid grey;
+        padding: 1vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        border-radius: 30px;
+        background-color: lightgray;
+    }
+    
+    .content h1 {
+        font-size: 5vw;
+        margin-bottom: 1vw;
+    }
+    
+    .content p {
+        width: 80%;
+        font-size: 3vw;
+        text-align: center;
+    }   
+    
+    .beneficios {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 5vw;
+    }
+    
+    .beneficios h1 {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        font-size: 5vw;
+        text-align: center;
+    }
+    
+    .beneficios p {
+        margin-bottom: 3vw;
+        font-size: 3vw;
+    }
+    
+    .beneficios div {
+        width: fit-content;
+        display: flex;
+        margin: 0 auto;
+        border: 0.1vw solid grey;
+        border-radius: 2vw;
+        padding: 2vw;
+    }
+    
+    .beneficios ul{
+        list-style: inside;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    
+    .beneficios ul li {
+        margin-top: 0.5vw;
+        margin-bottom: 0.5vw;
+        font-size: 3vw;
+    }
+}

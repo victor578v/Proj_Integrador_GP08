@@ -1,0 +1,92 @@
+header {
+    background-color: lightgray;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav img {
+    width: 7vw;
+}
+
+header nav h1 {
+    margin-right: 24vw;
+    font-size: 1.8vw;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    width: 5vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+
+header nav ul:last-child {
+    margin-right: 12vw;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 1vw;
+}
+
+header nav ul li a:hover {
+    color: grey;
+}
+
+@media (max-width: 900px) {
+    header {
+        background-color: lightgray;
+    }
+    
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 18vw;
+    }
+    
+    header nav img {
+        width: 15vw;
+    }
+    
+    header nav h1 {
+        margin-right: 7vw;
+        font-size: 3vw;
+    }
+    
+    header nav ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    header nav ul li {
+        width: 5vw;
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+    
+    header nav ul:last-child {
+        margin-right: 15vw;
+    }
+    
+    header nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+        font-size: 3vw;
+    }
+    
+    header nav ul li a:hover {
+        color: grey;
+    }
+}

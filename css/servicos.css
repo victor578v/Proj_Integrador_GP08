@@ -1,0 +1,124 @@
+.servicos {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.servicos h1 {
+    margin: 0 auto;
+    margin-top: 2vw;
+    font-size: 2vw;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between ;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: grey solid 2px;
+    border-radius: 50px;
+    width: fit-content;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    margin: 3vw;
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.card img {
+    width: 20vw;
+    border: grey solid 2px;
+    border-radius: 2vw;
+}
+
+.card h3 {
+    border-left: grey 2px solid;
+    border-right: grey 2px solid;
+    border-bottom: grey 2px solid;
+    border-top: lightgray 3px solid;
+    background-color: lightgray;
+    text-align: center;
+    margin: 0 auto;
+    width: 10vw;
+    padding: 0.5vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    font-size: 1vw;
+    position: relative;
+    bottom: 0.14vw;
+}
+
+.imgpreco {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 900px) {
+    .servicos {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    
+    .servicos h1 {
+        margin: 0 auto;
+        margin-top: 3vw;
+        font-size: 5vw;
+    }
+    
+    .cards {
+        display: flex;
+        justify-content: space-around ;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        border: grey solid 2px;
+        border-radius: 3vw;
+        width: fit-content;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        margin: 3vw;
+    }
+    
+    .card h2 {
+        text-align: center;
+        font-size: 5vw;
+    }
+    
+    .card img {
+        width: 50vw;
+        border: grey solid 2px;
+        border-radius: 2vw;
+    }
+    
+    .card h3 {
+        border: grey 2px solid;
+        background-color: lightgray;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 2vw;
+        width: 30vw;
+        padding: 3vw;
+        border-radius: 2vw;
+        font-size: 4vw;
+        position: relative;
+        bottom: 0vw;
+    }
+    
+    .imgpreco {
+        display: flex;
+        flex-direction: column;
+    } 
+}
