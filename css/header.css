@@ -1,0 +1,70 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #f6f6f6;
+    height: 5vw;
+}
+
+.caixa_pesquisa {
+    width: 35vw;
+    display: flex;
+    border: none;
+    border-radius: 20px;
+}
+
+.caixa_pesquisa input {
+    padding: 0.6vw;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: gainsboro;
+    text-align: left;
+}
+
+.caixa_pesquisa button {
+    width: 5vw;
+    padding: 0.6vw;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: gainsboro;
+}
+
+.burger_logo {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    margin: 0.5vw;
+    margin-left: 4vw;
+    width: fit-content;
+}
+
+.icone_burger {
+    width: fit-content;
+    font-size: 1.7vw;
+}
+
+.logo {
+    width: 5vw;
+}
+
+.conta {
+    display: flex;
+    width: fit-content;
+    margin-right: 4vw;
+    gap: 4vw;
+}
+
+#cadastrar {
+    width: fit-content;
+    border: none;
+    border-radius: 15px;
+    background-color: gainsboro;
+    padding: 1.2vw;
+}
+
+#entrar {
+    width: fit-content;
+    border: none;
+}
