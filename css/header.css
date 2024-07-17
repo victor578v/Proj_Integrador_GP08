@@ -77,6 +77,7 @@
     border: none;
     padding: 1.2vw;
     cursor: pointer;
+    background-color: #f6f6f6;
 }
 
 #entrar:hover {
@@ -119,7 +120,7 @@
     color: #46d7ac;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 801px) {
     .conta_responsivo {
         display: none;
     }
@@ -182,7 +183,6 @@
     .navbar ul li {
         padding-top: 3vw;
         padding-bottom: 3vw;
-        border-bottom: black 2px solid;
     }
 
     .navbar ul li:last-child {
@@ -192,4 +192,8 @@
     .navbar ul li a {
         font-size: 4vw;
     }
+}
+
+.mostra{
+    display: block !important;
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
     <script defer src="script/script.js"></script>
     <title>NewWay Livros</title>
 </head>
@@ -36,14 +37,40 @@
     <nav class="navbar" id="navbar">
         <ul>
             <li class="conta_responsivo"><a href=".html">Entrar</a></li>
+            <hr class="conta_responsivo">
             <li class="conta_responsivo"><a href="ajuda.html">Cadastrar-se</a></li>
+            <hr class="conta_responsivo">
             <li><a href="sobre.html">Sobre</a></li>
+            <hr class="conta_responsivo">
             <li><a href="categorias.html">Categorias</a></li>
+            <hr class="conta_responsivo">
             <li><a href="novidades.html">Novidades</a></li>
+            <hr class="conta_responsivo">
             <li><a href="contato.html">Contato</a></li>
+            <hr class="conta_responsivo">
             <li><a href="ajuda.html">Ajuda</a></li>
         </ul>
     </nav>
+
+    <section class="banners">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="img/banner1.png" alt="banner 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner2.png" alt="banner 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner3.png" alt="banner 3">
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner4.png" alt="banner 4">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </section>
+    
 </body>
 
 </html>

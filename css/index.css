@@ -1,0 +1,42 @@
+.banners {
+    overflow: hidden;
+    position: relative;
+}
+
+.banners button {
+    width: 3%;
+    height: 10%;
+    position: absolute;
+    font-size: 2vw;
+    background-color: rgba(217, 217, 217, 0.7);
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    font-weight: lighter
+}
+
+.prev {
+    left: 1%;
+    top: 43%;
+}
+
+.next {
+    right: 1%;
+    top: 43%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img {
+    width: 100%;
+    display: block;
+}
