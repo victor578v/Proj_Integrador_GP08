@@ -11,6 +11,7 @@
     display: flex;
     border: none;
     border-radius: 20px;
+    background-color: gainsboro;
 }
 
 .caixa_pesquisa input {
@@ -29,6 +30,7 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: gainsboro;
+    cursor: pointer;
 }
 
 .burger_logo {
@@ -43,10 +45,24 @@
 .icone_burger {
     width: fit-content;
     font-size: 1.7vw;
+    cursor: pointer;
 }
 
 .logo {
     width: 5vw;
+}
+
+.logo_nome {
+    display: flex;
+    gap: 0.8vw;
+    cursor: pointer;
+}
+
+.nome h1 {
+    font-size: 1.3vw;
+    color: #46d7ac;
+    font-weight: lighter;
+    text-align: left;
 }
 
 .conta {
@@ -56,15 +72,124 @@
     gap: 4vw;
 }
 
+#entrar {
+    width: fit-content;
+    border: none;
+    padding: 1.2vw;
+    cursor: pointer;
+}
+
+#entrar:hover {
+    color: #46d7ac;
+}
+
 #cadastrar {
     width: fit-content;
     border: none;
     border-radius: 15px;
     background-color: gainsboro;
     padding: 1.2vw;
+    cursor: pointer;
 }
 
-#entrar {
-    width: fit-content;
-    border: none;
+#cadastrar:hover {
+    background-color: #46d7ac;
+    color: gainsboro;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 1vw;
+    background-color: gainsboro;
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.navbar ul li a:hover {
+    color: #46d7ac;
+}
+
+@media (min-width: 800px) {
+    .conta_responsivo {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        height: 25vw;
+    }
+    
+    .caixa_pesquisa {
+        width: 50vw;
+        margin-right: 5vw;
+    }
+    
+    .caixa_pesquisa input {
+        padding: 5vw;
+        font-size: 3vw;
+    }
+    
+    .caixa_pesquisa button {
+        padding: 5vw;
+    }
+    
+    #pesquisa_icone {
+        font-size: 3vw;
+    }
+
+    .burger_logo {
+        gap: 4vw;
+        margin: 0.5vw;
+        margin-left: 4vw;
+    }
+    
+    .icone_burger {
+        font-size: 9vw;
+    }
+    
+    .logo {
+        width: 18vw;
+    }
+    
+    .logo_nome {
+        gap: 0.8vw;
+    }
+    
+    .nome {
+        display: none;
+    }
+    
+    .conta {
+        display: none;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .navbar ul li {
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        border-bottom: black 2px solid;
+    }
+
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar ul li a {
+        font-size: 4vw;
+    }
 }
