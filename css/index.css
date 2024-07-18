@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
+
 .banners {
     overflow: hidden;
     position: relative;
@@ -65,8 +67,187 @@
     height: 1.2vw;
 }
 
+.livros {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+}
+
+.titulo {
+    display: flex;
+    justify-content: space-around;
+    gap: 72%;
+    margin-top: 3%;
+}
+
+.titulo h1 {
+    width: fit-content;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    font-family: 'Inter', sans-serif;
+}
+
+.titulo h2 {
+    width: fit-content;
+    font-size: 0.8vw;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.titulo h2:hover {
+    color: grey;
+}
+
+.cards {
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    background-color: gainsboro;
+    padding: 1.5vw;
+    padding-right: 0.8vw;
+    padding-left: 0.8 vw;
+    border: none;
+    border-radius: 10px;
+}
+
+.card {
+    width: fit-content;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+.card img {
+    width: 12vw;
+    border: none;
+    border-radius: 0.1vw;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.card h1 {
+    text-align: left;
+    margin: 0.2vw;
+    margin-bottom: 0.8vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+}
+
+.card h2 {
+    text-align: left;
+    margin: 0.2vw;
+    font-family: 'Inter', sans-serif;
+}
+
+.card h3 {
+    margin: 0.2vw;
+    text-align: left;
+    font-size: 0.6vw;
+    color: grey;
+    font-weight: lighter;
+}
+
+.card button {
+    width: 80%;
+    border: none;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    padding: 0.8vw;
+    margin-top: 0.3vw;
+    font-family: 'Inter', sans-serif;
+}
+
+.card button:hover {
+    color: #f9f9f9;
+    background-color: #46d7ac;
+    cursor: pointer;
+}
+
+
 @media (max-width: 800px) {
     .banners {
         display: none;
+    }
+
+    .livros {
+        gap: 3vw;
+    }
+
+    .titulo {
+        display: flex;
+        justify-content: space-around;
+        gap: 25%;
+        margin-top: 6%;
+    }
+
+    .titulo h1 {
+        width: fit-content;
+        font-size: 5vw;
+        font-weight: lighter;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .titulo h2 {
+        width: fit-content;
+        font-size: 4vw;
+        cursor: pointer;
+        font-family: 'Inter', sans-serif;
+
+    }
+
+    .cards {
+        width: 95%;
+        overflow: hidden;
+        overflow-x: scroll;
+        padding-top: 3vw;
+        padding-bottom: 4vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        white-space: nowrap;
+    }
+
+    .cards::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .cards::-webkit-scrollbar-thumb {
+        background-color: grey;
+        border-radius: 5px;
+    }
+
+    .cards img {
+        width: 130px;
+    }
+
+    .card h1 {
+        font-size: 4vw;
+        margin: 1vw;
+        margin-bottom: 2vw;
+    }
+
+    .card h2 {
+        font-size: 3vw;
+        margin: 1vw;
+    }
+
+    .card h3 {
+        margin: 1vw;
+        font-size: 2.5vw;
+    }
+
+    .card button {
+        width: 80%;
+        padding: 2vw;
+        margin-top: 1vw;
+        font-size: 4vw;
+    }
+
+    .card button:hover {
+        color: black;
+        background-color: #d9d9d9;
+    }
+
+    .card button:active {
+        background-color: #46d7ac;
+        color: #f6f6f6;
     }
 }
