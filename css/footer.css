@@ -1,0 +1,110 @@
+.logo_footer {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 3vw;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    gap: 1vw;
+}
+
+.logo_footer img {
+    width: 15vw;
+}
+
+.logo_footer h1 {
+    width: fit-content;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-size: 1.3vw;
+    
+}
+
+.bandeiras {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 1vw;
+}
+
+.bandeiras li {
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 15px;
+
+}
+
+.bandeiras li img {
+    width: 4.8vw; 
+    height: 2.7vw;
+    padding: 0.4vw;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-around;  
+    gap: 5vw;
+    margin: 1vw;
+}
+
+.Atendimento {
+    list-style: none;
+    width: 25%;
+    border: 2px red solid;
+}
+
+.Atendimento h3 {
+    text-align: left;
+    margin-left: 3.5vw;
+    font-size: 1vw;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+}
+
+.Atendimento li h1 {
+    text-align: left;
+    font-weight: bold;
+}
+
+.Atendimento li p {
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.image {
+    display: flex;
+    gap: 1vw;
+}
+
+.Atendimento2 {
+    list-style: none;
+    width: 25%;
+    border: 2px red solid;
+}
+
+.Atendimento2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.fonte {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.fonte2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logos2 {
+    width: 10%;
+}
