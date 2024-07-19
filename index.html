@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo 3 real.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script defer src="script/script.js"></script>
+    <title>NewWay Livros</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="burger_logo">
+            <i class="bi bi-list icone_burger" id="burger_menu"></i>
+            <div class="logo_nome" href="index.html">
+                <img src="img/logo 3 real.png" class="logo" alt="logo">
+                <div class="nome">
+                    <h1>NewWay</h1>
+                    <h1>Biblioteca</h1>
+                </div>
+            </div>
+        </div>
+        <form action="/search" method="GET" class="caixa_pesquisa">
+            <input type="text" name="query">
+            <button type="submit"><i class="bi bi-search" id="pesquisa_icone"></i></button>
+        </form>
+        <div class="conta">
+            <button id="entrar">Entrar</button>
+            <button id="cadastrar">Cadastrar-se</button>
+        </div>
+    </header>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li class="conta_responsivo"><a href=".html">Entrar</a></li>
+            <hr class="conta_responsivo">
+            <li class="conta_responsivo"><a href="ajuda.html">Cadastrar-se</a></li>
+            <hr class="conta_responsivo">
+            <li><a href="sobre.html">Sobre</a></li>
+            <hr class="conta_responsivo">
+            <li><a href="categorias.html">Categorias</a></li>
+            <hr class="conta_responsivo">
+            <li><a href="novidades.html">Novidades</a></li>
+            <hr class="conta_responsivo">
+            <li><a href="contato.html">Contato</a></li>
+            <hr class="conta_responsivo">
+            <li><a href="ajuda.html">Ajuda</a></li>
+        </ul>
+    </nav>
+
+    <section class="banners">
+        <div class="carousel">
+            <div class="carousel-item active">
+                <img src="img/banner1.png" alt="banner 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner2.png" alt="banner 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner3.png" alt="banner 3">
+            </div>
+            <div class="carousel-item">
+                <img src="img/banner4.png" alt="banner 4">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+        <div class="carousel-indicators">
+            <span class="indicator" onclick="trocaSlide(0)"></span>
+            <span class="indicator" onclick="trocaSlide(1)"></span>
+            <span class="indicator" onclick="trocaSlide(2)"></span>
+            <span class="indicator" onclick="trocaSlide(3)"></span>
+        </div>
+    </section>
+
+    <section class="livros">
+        <div class="titulo">
+            <h1>Mais Vendidos</h1>
+            <h2>Ver Todos</h2>
+        </div>
+        <div class="cards" id="mais_vendidos">
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+        </div>
+
+        <div class="titulo">
+            <h1>Lancamentos</h1>
+            <h2>Ver Todos</h2>
+        </div>
+        <div class="cards" id="lancamentos">
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+        </div>
+
+        <div class="titulo">
+            <h1>Infantil</h1>
+            <h2>Ver Todos</h2>
+        </div>
+        <div class="cards" id="infantil">
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="img/livro1.png" alt="livro1">
+                <h1>Titulo do livro</h1>
+                <h2>R$ 75,99</h2>
+                <h3>ou 2x de 37,99R$</h3>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="assina">
+            <h1>OFERTAS E NOVIDADES</h1>
+            <p>Assine nossa newsletter e receba nossas novidades e lançamentos com exclusividade.</p>
+            <div class="inputs">
+                <input type="text" placeholder="Digite seu nome">
+                <input type="email" placeholder="Digite seu email">
+            </div>
+    </section>
+
+    <footer>
+
+        <div class="logo_footer">
+            <img src="img/logo.png" alt="logo">
+            <h1>PAGUE COM</h1>
+            
+            <ul class="bandeiras">
+                <li><img src="img/visa.png" alt="" id="visa"></li>
+                <li><img src="img/mastercard.png" alt="" id="mastercard"></li>
+                <li><img src="img/Hipercard_logo.png" alt="" id="hipercard"></li>
+                <li><img src="img/elo.png" alt="" id="elo"></li>
+                <li><img src="img/pix.png" alt="" id="pix"></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="footer_content">
+            <ul class="Atendimento">
+                <li>
+                    <h1 class="fonte">ATENDIMENTO</h1>
+                </li>
+                <li>
+                    <div class="image">
+                        <img src="img/whatsapp-icon.png" alt="" class="logos2">
+                        <p>(53) 9999-9999</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="image">
+                        <img src="img/telefone.svg" alt="" class="logos2">
+                        <p>(53) 9999-9999</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="image">
+                        <img src="img/email.png" alt="" class="logos2">
+                        <p>email@newwaybiblioteca.com.br</p>
+                    </div>
+                </li>
+                <li>
+                    <h3>De segunda à sexta feira das 08:00 às 18:00</p>
+                </li>
+            </ul>
+        
+            <ul class="Atendimento2">
+                <li>
+                    <h1 class="fonte">LOJA VIRTUAL</h1>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Quem Somos</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Nossas Lojas</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Central de Atendimento</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Trabalhe Conosco</a></p>
+                </li>
+            </ul>
+        
+            <ul class="Atendimento2">
+                <li>
+                    <h1 class="fonte">INSTITUCIONAL</h1>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Como Comprar</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Política de Privacidade</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Site Seguro</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Trocas e Devoluções</a></p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

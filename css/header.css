@@ -1,0 +1,203 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #f6f6f6;
+    height: 5vw;
+    z-index: 1000;
+}
+
+.caixa_pesquisa {
+    width: 35vw;
+    display: flex;
+    border: none;
+    border-radius: 20px;
+    background-color: gainsboro;
+}
+
+.caixa_pesquisa input {
+    padding: 0.6vw;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: gainsboro;
+    text-align: left;
+}
+
+.caixa_pesquisa button {
+    width: 5vw;
+    padding: 0.6vw;
+    border: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.burger_logo {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    margin: 0.5vw;
+    margin-left: 4vw;
+    width: fit-content;
+}
+
+.icone_burger {
+    width: fit-content;
+    font-size: 1.7vw;
+    cursor: pointer;
+}
+
+.logo {
+    width: 5vw;
+}
+
+.logo_nome {
+    display: flex;
+    gap: 0.8vw;
+    cursor: pointer;
+}
+
+.nome h1 {
+    font-size: 1.3vw;
+    color: #46d7ac;
+    font-weight: lighter;
+    text-align: left;
+}
+
+.conta {
+    display: flex;
+    width: fit-content;
+    margin-right: 4vw;
+    gap: 4vw;
+}
+
+#entrar {
+    width: fit-content;
+    border: none;
+    padding: 1.2vw;
+    cursor: pointer;
+    background-color: #f6f6f6;
+}
+
+#entrar:hover {
+    color: #46d7ac;
+}
+
+#cadastrar {
+    width: fit-content;
+    border: none;
+    border-radius: 15px;
+    background-color: gainsboro;
+    padding: 1.2vw;
+    cursor: pointer;
+}
+
+#cadastrar:hover {
+    background-color: #46d7ac;
+    color: gainsboro;
+}
+
+.navbar {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    transform: translateX(-100vw);
+    transition: transform 0.5s ease;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 1vw;
+    background-color: rgb(220, 220, 220, 0.9);
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.navbar ul li a:hover {
+    color: #46d7ac;
+}
+
+.mostra {
+    display: block !important;
+    transform: translateY(0);
+}
+
+@media (min-width: 801px) {
+    .conta_responsivo {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        height: 25vw;
+    }
+    
+    .caixa_pesquisa {
+        width: 50vw;
+        margin-right: 5vw;
+    }
+    
+    .caixa_pesquisa input {
+        padding: 4vw;
+        font-size: 4vw;
+    }
+    
+    .caixa_pesquisa button {
+        width: 30%;
+        padding: 4vw;
+    }
+    
+    #pesquisa_icone {
+        font-size: 4vw;
+    }
+
+    .burger_logo {
+        gap: 4vw;
+        margin: 0.5vw;
+        margin-left: 4vw;
+    }
+    
+    .icone_burger {
+        font-size: 9vw;
+    }
+    
+    .logo {
+        width: 18vw;
+    }
+    
+    .logo_nome {
+        gap: 0.8vw;
+    }
+    
+    .nome {
+        display: none;
+    }
+    
+    .conta {
+        display: none;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 2vw;
+        background-color: rgb(220, 220, 220, 1);
+    }
+
+    .navbar ul li {
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+    
+    .navbar ul li a {
+        font-size: 4vw;
+    }
+}

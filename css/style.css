@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1vw;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+}
+
+html {
+    background-color: white;
+}
