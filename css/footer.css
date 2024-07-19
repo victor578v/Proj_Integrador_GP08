@@ -46,7 +46,8 @@
     display: flex;
     justify-content: space-around;  
     gap: 5vw;
-    margin: 1vw;
+    padding: 1vw;
+    background-color: #f6f6f6;
 }
 
 .Atendimento {
@@ -172,7 +173,7 @@
         align-items: center;
         width: fit-content;
         gap: 10vw;
-        margin: 5vw;
+        padding: 5vw;
     }
     
     .Atendimento {
