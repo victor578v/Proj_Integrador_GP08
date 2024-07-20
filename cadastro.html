@@ -1,99 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>cadastro</title>
 </head>
+
 <body>
     <main>
-    <img src="img/logo.png" alt="">
-    <div class="formulario">
-        <p class="p">Criar conta</p>
-        <form action="/submit_registration" method="POST">
-            <label for="nome">Seu nome</label>
-            <input type="text" id="nome" name="nome" required>
-        
-            <label for="telefone">Número de celular ou e-mail</label>
-            <input type="text" id="telefone" name="telefone" required>
-        
-            <label for="senha">Digite sua senha</label>
-            <input type="password" id="senha" name="senha" required>
-        
-            <label for="repetirSenha">Digite novamente sua senha</label>
-            <input type="password" id="repetirSenha" name="repetirSenha" required>
-        
-            <h5>aceito os termos de condições</h5>
+        <a href="index.html"><img src="img/logo.png" alt=" logo com nome" id="logo_nome"></a>
+        <div class="formulario">
+            <p>Criar conta</p>
+            <form action="/submit_registration" method="POST">
+                <div class="label_input">
+                    <label for="nome"><h1>Seu nome</h1></label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
 
-            <button type="submit">Continuar</button>
+                <div class="label_input">
+                    <label for="telefone"><h1>Seu E-mail</h1></label>
+                    <input type="text" id="telefone" name="telefone" required>
+                </div>
 
-            <p>ja possui uma conta? <a href="">fazer login</a></p>
-        </form>
-    </div>
-</main>
-<footer>
-        <hr>
-        <div class="coisas">
-        <ul class="Atendimento">
-            <li>
-                <h1 class="fonte">ATENDIMENTO</h1>
-            </li>
-            <li><div class="image"><img src="img/whatsapp-icon.png" alt="" class="logos2">
-                <p>(53) 9999-9999</p></div>
-            </li>
-            <li><div class="image"><img src="img/telefone.png" alt="" class="logos2">
-                <p>(53) 9999-9999</p>
-            </div>
-            </li>
-            <li><div class="image"><img src="img/email.png" alt="" class="logos2">
-                <p>email@newwaybiblioteca.com.br</p>
-            </div>
-            </li>
-            <li>
-                <p>De segunda à sexta feira das 08:00 às 18:00/</p>
-            </li>
-        </ul>
+                <div class="label_input">
+                    <label for="senha"><h1>Digite sua senha</h1></label>
+                    <input type="password" id="senha" name="senha" placeholder="Pelo menos 8 caracteres" required>
+                </div>
 
-        
-            <ul class="Atendimento2">
-            <il>
-                <h1 class="fonte">LOJA VIRTUAL</h1>
-            </il>
-            <il>
-                <p class="fonte2"><a href="">Quem Somos</a></p>
-            </il>
-            <il>
-                <p class="fonte2"><a href="">Nossas Lojas</a></p>
-            </il>
-            <il>
-                <p class="fonte2"><a href="">Central de Atendimento</a></p>
-            </il>
-            <il>
-                <p class="fonte2"><a href="">Trabalhe Conosco</a></p>
-            </il>
-</ul>
-<ul class="Atendimento2">
-            <il>
-                <h1 class="fonte">INSTITUCIONAL</h1>
-            </il>
-            <il>
-                <p class="fonte2"><a href="">Como Comprar</a></p>
-            </il>
-            <il>
-                <p class="fonte2"><a href="">Política de Privacidade</a></p>
-            </il>
-            <il>
-                <p class="fonte2"><a href="">Site Seguro</a></p>
-            </il>
-            <il>
-                <p class="fonte2"><a href="">Trocas e Devoluções</a></p>
-            </il>
-        </ul>
+                <div class="label_input">
+                    <label for="repetirSenha"><h1>Digite novamente sua senha</h1></label>
+                    <input type="password" id="repetirSenha" name="repetirSenha" placeholder="********" required>
+                </div>
+
+                <div class="termos">
+                    <input type="checkbox">
+                    <h1>Aceito os termos e condicoes</h1>
+                </div>
+
+                <button type="submit">Continuar</button>
+
+                <h2>Já possui uma conta? <a href="">fazer login</a></h2>
+            </form>
         </div>
+    </main>
+    <footer>
 
-    </footer>    
-    
+        <hr>
+
+        <div class="footer_content">
+            <ul class="Atendimento">
+                <li>
+                    <h1 class="fonte">ATENDIMENTO</h1>
+                </li>
+                <li>
+                    <div class="image">
+                        <img src="img/whatsapp-icon.png" alt="" class="logos2">
+                        <p>(53) 9999-9999</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="image">
+                        <img src="img/telefone.svg" alt="" class="logos2">
+                        <p>(53) 9999-9999</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="image">
+                        <img src="img/email.png" alt="" class="logos2">
+                        <p>email@newwaybiblioteca.com.br</p>
+                    </div>
+                </li>
+                <li>
+                    <h3>De segunda à sexta feira das 08:00 às 18:00</p>
+                </li>
+            </ul>
+
+            <ul class="Atendimento2">
+                <li>
+                    <h1 class="fonte">LOJA VIRTUAL</h1>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Quem Somos</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Nossas Lojas</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Central de Atendimento</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Trabalhe Conosco</a></p>
+                </li>
+            </ul>
+
+            <ul class="Atendimento2">
+                <li>
+                    <h1 class="fonte">INSTITUCIONAL</h1>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Como Comprar</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Política de Privacidade</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Site Seguro</a></p>
+                </li>
+                <li>
+                    <p class="fonte2"><a href="#">Trocas e Devoluções</a></p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
 </body>
+
 </html>

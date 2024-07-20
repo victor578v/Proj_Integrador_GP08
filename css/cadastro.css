@@ -1,0 +1,213 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
+
+body {
+    background-color: #EDEDED;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo_nome {
+    width: 20vw;
+    margin: 2vw;
+}
+
+.formulario {
+    width: 30%;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 1.2vw;
+    padding-top: 1.7vw;
+    border-radius: 16px;
+    border: 1px solid #868686;
+    margin-bottom: 9.6%;
+
+}
+
+.formulario p {
+    font-size: 1.7vw;
+    text-align: start;
+    width: 100%;
+    margin-bottom: 0.8vw;
+    font-family: 'Inter', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+form h2 {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+}
+
+form h2 a {
+    color: #008FAE;
+    text-decoration: none;
+}
+
+.label_input label h1 {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    margin-bottom: 0.3vw;
+}
+
+.label_input input {
+    width: 100%;
+    height: 2.2vw;
+    text-align: left;
+    border: 1px solid #808080;
+    border-radius: 8px;
+    padding: 0.5vw;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+}
+
+.termos {
+    display: flex;
+    justify-content: start;
+}
+
+.termos input {
+    width: 1.4vw;
+    height: 1vw;
+    border: none;
+    border-radius: 2vw;
+}
+
+.termos h1 {
+    width: fit-content;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9vw;
+    font-weight: lighter;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #d9d9d9;
+    height: 2.5vw;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: lighter;
+}
+
+button:hover {
+    background-color: #46d7ac;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+
+@media (max-width: 800px) {
+    #logo_nome {
+        width: 70vw;
+        margin: 10vw;
+    }
+
+    .formulario {
+        width: 80%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        padding: 4vw;
+        padding-top: 3vw;
+        border-radius: 12px;
+        border: 3px solid #868686;
+        margin-bottom: 8%;
+
+    }
+
+    .formulario p {
+        font-size: 7vw;
+        text-align: start;
+        width: 100%;
+        margin-bottom: 2vw;
+        font-family: 'Inter', sans-serif;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    form h2 {
+        text-align: left;
+        font-family: 'Inter', sans-serif;
+        font-weight: lighter;
+        font-size: 4vw;
+    }
+
+    form h2 a {
+        color: #008FAE;
+        text-decoration: none;
+        font-size: 4vw;
+    }
+
+    .label_input label h1 {
+        text-align: left;
+        font-family: 'Inter', sans-serif;
+        font-weight: lighter;
+        margin-bottom: 1.5vw;
+        font-size: 4vw;
+    }
+
+    .label_input input {
+        width: 100%;
+        height: 10vw;
+        font-size: 3vw;
+        text-align: left;
+        border: 1px solid #808080;
+        border-radius: 6px;
+        padding: 0.5vw;
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+    }
+
+    .termos input {
+        width: 6vw;
+        height: 6vw;
+        border: none;
+        border-radius: 2vw;
+    }
+
+    .termos h1 {
+        width: fit-content;
+        font-family: 'Inter', sans-serif;
+        font-size: 3.8vw;
+        font-weight: lighter;
+        margin-left: 2vw;
+    }
+
+    button {
+        margin-top: 1vw;
+        background-color: #d9d9d9;
+        height: 12vw;
+        text-align: center;
+        border-radius: 8px;
+        border: none;
+        font-size: 6vw;
+        font-weight: lighter;
+    }
+
+    button:hover {
+        background-color: #d9d9d9;
+        color: black;
+    }
+
+    button:active {
+        background-color: #46d7ac;
+        color: white;
+    }
+}
