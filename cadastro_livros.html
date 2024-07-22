@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/cadastroLivros.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="script/scriptCadastro.js" defer></script>
+    <script src="script/scriptCadastro_livros.js" defer></script>
     <link rel="shortcut icon" href="img/logo 3 real.png" type="image/x-icon">
     <title>NewWay Livros</title>
 </head>
@@ -25,14 +25,14 @@
                         </label>
                         <input type="text" id="titulo" name="titulo" required>
                     </div>
-            
+
                     <div class="label_input">
                         <label for="autor">
                             <h1>Autor</h1>
                         </label>
                         <input type="text" id="autor" name="autor" required>
                     </div>
-            
+
                     <div class="label_input">
                         <label for="isbn">
                             <h1>ISBN</h1>
@@ -41,64 +41,55 @@
                     </div>
 
                 </div>
-            
+
                 <div class="form-group">
                     <div class="label_input">
-                        <label for="data_lancamento">
+                        <label for="dataPublicacao">
                             <h1>Data de lançamento</h1>
                         </label>
-                        <input type="date" id="data_lancamento" name="data_lancamento" required>
+                        <input type="date" id="dataPublicacao" name="dataPublicacao" required>
                     </div>
-            
+                
                     <div class="label_input">
                         <label for="preco">
                             <h1>Preço</h1>
                         </label>
                         <input type="number" id="preco" name="preco" step="0.01" required>
                     </div>
-            
+                
                     <div class="label_input">
                         <label for="categoria">
                             <h1>Categoria</h1>
                         </label>
-                        <input type="text" id="categoria" name="categoria" required>
+                        <select id="categoria" name="categoria" required>
+                            <!-- As opções serão preenchidas dinamicamente -->
+                        </select>
                     </div>
                 </div>
-            
+                
+
                 <div class="form-group">
                     <div class="label_input">
                         <div class="capa">
                             <label for="capa">
                                 <h1>Capa</h1>
                             </label>
-                            <input type="url" id="capaUrl" name="capa" placeholder="http://example.com/capa.jpg" required>
+                            <input type="url" id="capaUrl" name="capa" placeholder="http://example.com/capa.jpg"
+                                required>
                             <div class="preview">
                                 <img id="capaPreview" src="#" alt="Preview da Capa">
                             </div>
                         </div>
                         <div id="envio">
-                            <button type="submit">Cadastrar</button>
+                            <button type="submit" onclick="validarFormularioLivro()">Cadastrar</button>
                         </div>
                     </div>
                 </div>
-            
-            </form>    
-            
+
+            </form>
+
         </div>
     </main>
-
-    <script>
-        // Seleciona o input de URL
-        const inputUrl = document.getElementById('capaUrl');
-        // Seleciona o elemento de preview da imagem
-        const previewImg = document.getElementById('capaPreview');
-    
-        // Adiciona um ouvinte de evento para o input de URL
-        inputUrl.addEventListener('input', function() {
-            // Atualiza o src da imagem de preview com o valor do input de URL
-            previewImg.src = inputUrl.value;
-        });
-    </script>
 
     <footer>
 

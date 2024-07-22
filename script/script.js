@@ -97,12 +97,13 @@ async function carregaLivrosMaisVendidos() {
 
     const geradorDeCards = document.getElementById("mais_vendidos");
     geradorDeCards.innerHTML = data.livros.map((livro) => {
+        const imagemSrc = livro.imagemUrl ? livro.imagemUrl : `img/livro${livro.idLivro}.png`;
         return `
             <div class="card">
-                <img src="${'img/livro' + livro.idLivro + '.png'}" alt="Capa do livro ${livro.titulo}">
+                <img src="${imagemSrc}" alt="Capa do livro ${livro.titulo}">
                 <h1>${livro.titulo}</h1>
                 <h2>R$ ${livro.preco}</h2>
-                <h3>ou 2x de R$ ${livro.preco / 2}</h3>
+                <h3>ou 2x de R$ ${(livro.preco / 2)}</h3>
                 <button>Comprar</button>
             </div>
         `;
@@ -113,21 +114,18 @@ async function carregaLivrosLancamentos() {
     const response = await fetch(urlLivros);
     const data = await response.json();
 
-    // Ordena os livros por data de publicação (mais recentes primeiro)
-    const livrosOrdenadosPorData = data.livros
-        .sort((a, b) => new Date(b.dataPublicacao) - new Date(a.dataPublicacao));
-
-    // Seleciona os primeiros 5 livros mais recentes
+    const livrosOrdenadosPorData = data.livros.sort((a, b) => new Date(b.dataPublicacao) - new Date(a.dataPublicacao));
     const livrosMaisRecentes = livrosOrdenadosPorData.slice(0, 5);
 
     const geradorDeCards = document.getElementById("lancamentos");
     geradorDeCards.innerHTML = livrosMaisRecentes.map((livro) => {
+        const imagemSrc = livro.imagemUrl ? livro.imagemUrl : `img/livro${livro.idLivro}.png`;
         return `
             <div class="card">
-                <img src="${'img/livro' + livro.idLivro + '.png'}" alt="Capa do livro ${livro.titulo}">
+                <img src="${imagemSrc}" alt="Capa do livro ${livro.titulo}">
                 <h1>${livro.titulo}</h1>
                 <h2>R$ ${livro.preco}</h2>
-                <h3>ou 2x de R$ ${livro.preco / 2}</h3>
+                <h3>ou 2x de R$ ${(livro.preco / 2)}</h3>
                 <button>Comprar</button>
             </div>
         `;
@@ -138,27 +136,24 @@ async function carregaLivrosInfantil() {
     const response = await fetch(urlLivros);
     const data = await response.json();
 
-    // Filtra livros da categoria "Infantil" (ID 6)
     const livrosInfantil = data.livros.filter(livro => livro.Categoria_idCategoria === 6);
-
-    // Embaralha o array e seleciona os primeiros 5 livros
-    const livrosAleatorios = livrosInfantil
-        .sort(() => Math.random() - 0.5) // Embaralha o array
-        .slice(0, 5); // Seleciona os primeiros 5 livros após o embaralhamento
+    const livrosAleatorios = livrosInfantil.sort(() => Math.random() - 0.5).slice(0, 5);
 
     const geradorDeCards = document.getElementById("infantil");
     geradorDeCards.innerHTML = livrosAleatorios.map((livro) => {
+        const imagemSrc = livro.imagemUrl ? livro.imagemUrl : `img/livro${livro.idLivro}.png`;
         return `
             <div class="card">
-                <img src="${'img/livro' + livro.idLivro + '.png'}" alt="Capa do livro ${livro.titulo}">
+                <img src="${imagemSrc}" alt="Capa do livro ${livro.titulo}">
                 <h1>${livro.titulo}</h1>
                 <h2>R$ ${livro.preco}</h2>
-                <h3>ou 2x de R$ ${livro.preco / 2}</h3>
+                <h3>ou 2x de R$ ${(livro.preco / 2)}</h3>
                 <button>Comprar</button>
             </div>
         `;
     }).join('');
 }
+
 
 
 carregaUsuarios()

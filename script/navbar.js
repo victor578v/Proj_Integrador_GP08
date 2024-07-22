@@ -21,7 +21,7 @@ async function verificarLogado() {
         if (data.success) {
             conta.style.display = 'none';
             userArea.style.display = 'flex';
-            userArea2.style.display = 'none'
+            userArea2.style.display = 'none';
 
             userArea.innerHTML = `
                 <h1>Olá ${data.user.nome}</h1>

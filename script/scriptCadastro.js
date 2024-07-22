@@ -39,6 +39,9 @@ async function validarFormulario() {
     if (!senha.value.trim()) {
         senha.setCustomValidity('Por favor, digite sua senha.');
         formIsValid = false;
+    } else if (senha.value.length < 8) {
+        senha.setCustomValidity('A senha deve ter pelo menos 8 caracteres.');
+        formIsValid = false;
     }
     
     if (!repetirSenha.value.trim()) {

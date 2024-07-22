@@ -46,6 +46,27 @@ app.get("/livros/mais-vendidos", async (req, res) => {
     }
 });
 
+app.post('/livros', async (req, res) => {
+    const { titulo, autor, isbn, preco, dataPublicacao, Categoria_idCategoria, imagemUrl } = req.body;
+
+    try {
+        await knexdb('Livro').insert({
+            titulo,
+            autor,
+            isbn,
+            preco,
+            dataPublicacao,
+            Categoria_idCategoria,
+            imagemUrl
+        });
+
+        res.status(201).json({ message: "Livro cadastrado com sucesso" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Erro ao cadastrar livro" });
+    }
+});
+
 app.post("/usuarios", async (req, res) => {
     const { nome, email, telefone, senha } = req.body;
 
@@ -96,6 +117,16 @@ app.post('/login', async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Erro ao verificar credenciais' });
+    }
+});
+
+app.get('/categorias', async (req, res) => {
+    try {
+        const categorias = await knexdb('categoria').select('idCategoria', 'nome');
+        res.json({ categorias });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Erro ao buscar categorias' });
     }
 });
 

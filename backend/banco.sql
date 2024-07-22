@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS `Livro` (
   `preco` DECIMAL(10,2) NOT NULL,
   `dataPublicacao` DATE NULL,
   `Categoria_idCategoria` INT NOT NULL,
+  `imagemUrl` TEXT NULL,
   PRIMARY KEY (`idLivro`),
   CONSTRAINT `fk_Livro_Categoria1`
     FOREIGN KEY (`Categoria_idCategoria`)
@@ -72,7 +73,8 @@ INSERT INTO Categoria (nome) VALUES
 ('Romance'),        -- idCategoria = 3
 ('Fantasia'),       -- idCategoria = 4
 ('Biografia'),      -- idCategoria = 5
-('Infantil');       -- idCategoria = 6
+('Infantil'),      -- idCategoria = 6
+('Terror');       -- idCategoria = 7
 
 -- Inserir livros
 INSERT INTO `Livro` (`idLivro`, `titulo`, `autor`, `isbn`, `preco`, `dataPublicacao`, `Categoria_idCategoria`) VALUES
@@ -89,7 +91,7 @@ INSERT INTO `Livro` (`idLivro`, `titulo`, `autor`, `isbn`, `preco`, `dataPublica
 
 --Inserir Usuarios
 INSERT INTO Usuario (nome, email, senha, telefone, cargo) VALUES
-('João Silva', 'joao.silva@example.com', 'senha123', '1234567890', 1),
+('Admin', 'admin@admin.com', 'admin', 'admin', 1),
 ('Maria Oliveira', 'maria.oliveira@example.com', 'senha456', '0987654321', 2);
 
 -- Inserir pedidos

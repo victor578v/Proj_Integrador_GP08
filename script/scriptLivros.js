@@ -55,9 +55,10 @@ async function carregaTodosOsLivros() {
 
         // Gera os cards para todos os livros
         geradorDeCards.innerHTML = data.livros.map((livro) => {
+            const imagemSrc = livro.imagemUrl ? livro.imagemUrl : `img/livro${livro.idLivro}.png`;
             return `
                 <div class="card">
-                    <img src="${'img/livro' + livro.idLivro + '.png'}" alt="Capa do livro ${livro.titulo}">
+                    <img src="${imagemSrc}" alt="Capa do livro ${livro.titulo}">
                     <h1>${livro.titulo}</h1>
                     <h2>R$ ${livro.preco}</h2>
                     <h3>ou 2x de R$ ${(livro.preco / 2)}</h3>

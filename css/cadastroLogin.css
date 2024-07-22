@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
 
 body {
-    background-color: #EDEDED;
+    background-color: white;
 }
 
 main {
@@ -18,7 +18,7 @@ main {
 .formulario {
     width: 30%;
     font-size: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: #EDEDED;
     display: flex;
     flex-direction: column;
     padding: 1.2vw;
