@@ -6,6 +6,7 @@ async function verificarLogado() {
     const conta = document.getElementById('conta');
     const userArea = document.getElementById('usuario');
     const userArea2 = document.getElementById('usuario2');
+    const logout = document.getElementById('logout')
 
     if (user) {
         const userData = JSON.parse(user);
@@ -29,11 +30,14 @@ async function verificarLogado() {
         } else {
             console.error(data.message);
         }
+    } else {
+        logout.style.display = 'none'
     }
 }
 
 function logout() {
     localStorage.removeItem('user');
+    window.location.href = './index.html';
 }
 
 verificarLogado()

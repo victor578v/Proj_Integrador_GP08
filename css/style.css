@@ -14,3 +14,10 @@
 html {
     background-color: white;
 }
+
+.gasparzinho {
+    color: white;
+    background-color: white;
+    cursor: default;
+    border: none;
+}

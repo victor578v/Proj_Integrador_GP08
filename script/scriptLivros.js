@@ -19,10 +19,16 @@ async function verificarCargo() {
         console.log(data)
 
         if (data.success) {
-            titulo.innerHTML = `
+            if (data.user.cargo == 1) {
+                titulo.innerHTML = `
                 <h1>Nossa selecao de livros</h1>
                 <a href="./cadastro_livros.html"><button>Cadastrar livro</button></a>
             `;
+            } else {
+                titulo.innerHTML = `
+                <h1>Nossa selecao de livros</h1>
+            `;
+            }
         } else {
             console.error(data.message);
         }

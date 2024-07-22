@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cadastroLogin.css">
+    <link rel="stylesheet" href="css/cadastroLivros.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="script/scriptCadastro.js"></script>
+    <script src="script/scriptCadastro.js" defer></script>
     <link rel="shortcut icon" href="img/logo 3 real.png" type="image/x-icon">
     <title>NewWay Livros</title>
 </head>
@@ -16,56 +16,89 @@
     <main>
         <a href="index.html"><img src="img/logo.png" alt="logo com nome" id="logo_nome"></a>
         <div class="formulario">
-            <p>Criar conta</p>
+            <p>Cadastrar Livro</p>
             <form id="registrationForm" action="" method="post">
-                <div class="label_input">
-                    <label for="nome">
-                        <h1>Seu nome</h1>
-                    </label>
-                    <input type="text" id="nome" name="nome" required>
+                <div class="form-group">
+                    <div class="label_input">
+                        <label for="titulo">
+                            <h1>Titulo</h1>
+                        </label>
+                        <input type="text" id="titulo" name="titulo" required>
+                    </div>
+            
+                    <div class="label_input">
+                        <label for="autor">
+                            <h1>Autor</h1>
+                        </label>
+                        <input type="text" id="autor" name="autor" required>
+                    </div>
+            
+                    <div class="label_input">
+                        <label for="isbn">
+                            <h1>ISBN</h1>
+                        </label>
+                        <input type="text" id="isbn" name="isbn" required>
+                    </div>
+
                 </div>
-
-                <div class="label_input">
-                    <label for="email">
-                        <h1>Seu E-mail</h1>
-                    </label>
-                    <input type="email" id="email" name="email" required>
+            
+                <div class="form-group">
+                    <div class="label_input">
+                        <label for="data_lancamento">
+                            <h1>Data de lançamento</h1>
+                        </label>
+                        <input type="date" id="data_lancamento" name="data_lancamento" required>
+                    </div>
+            
+                    <div class="label_input">
+                        <label for="preco">
+                            <h1>Preço</h1>
+                        </label>
+                        <input type="number" id="preco" name="preco" step="0.01" required>
+                    </div>
+            
+                    <div class="label_input">
+                        <label for="categoria">
+                            <h1>Categoria</h1>
+                        </label>
+                        <input type="text" id="categoria" name="categoria" required>
+                    </div>
                 </div>
-
-                <div class="label_input">
-                    <label for="telefone">
-                        <h1>Seu Telefone</h1>
-                    </label>
-                    <input type="text" id="telefone" name="telefone" required>
+            
+                <div class="form-group">
+                    <div class="label_input">
+                        <div class="capa">
+                            <label for="capa">
+                                <h1>Capa</h1>
+                            </label>
+                            <input type="url" id="capaUrl" name="capa" placeholder="http://example.com/capa.jpg" required>
+                            <div class="preview">
+                                <img id="capaPreview" src="#" alt="Preview da Capa">
+                            </div>
+                        </div>
+                        <div id="envio">
+                            <button type="submit">Cadastrar</button>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="label_input">
-                    <label for="senha">
-                        <h1>Digite sua senha</h1>
-                    </label>
-                    <input type="password" id="senha" name="senha" placeholder="Pelo menos 8 caracteres" required>
-                </div>
-
-                <div class="label_input">
-                    <label for="repetirSenha">
-                        <h1>Digite novamente sua senha</h1>
-                    </label>
-                    <input type="password" id="repetirSenha" name="repetirSenha" placeholder="********" required>
-                </div>
-
-                <div class="termos">
-                    <input type="checkbox" id="termos">
-                    <label for="termos">
-                        <h1>Aceito os termos e condições</h1>
-                    </label>
-                </div>
-
-                <button type="submit" onclick="validarFormulario()">Continuar</button>
-
-                <h2>Já possui uma conta? <a href="login.html">fazer login</a></h2>
-            </form>
+            
+            </form>    
+            
         </div>
     </main>
+
+    <script>
+        // Seleciona o input de URL
+        const inputUrl = document.getElementById('capaUrl');
+        // Seleciona o elemento de preview da imagem
+        const previewImg = document.getElementById('capaPreview');
+    
+        // Adiciona um ouvinte de evento para o input de URL
+        inputUrl.addEventListener('input', function() {
+            // Atualiza o src da imagem de preview com o valor do input de URL
+            previewImg.src = inputUrl.value;
+        });
+    </script>
 
     <footer>
 

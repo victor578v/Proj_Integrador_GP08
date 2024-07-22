@@ -1,0 +1,262 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
+
+body {
+    background-color: #EDEDED;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo_nome {
+    width: 20vw;
+    margin: 2vw;
+}
+
+.formulario {
+    width: fit-content;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 1.2vw;
+    padding-top: 1.7vw;
+    border-radius: 16px;
+    border: 1px solid #868686;
+    margin-bottom: 9.6%;
+
+}
+
+.formulario p {
+    font-size: 1.7vw;
+    text-align: start;
+    width: 100%;
+    margin-bottom: 0.8vw;
+    font-family: 'Inter', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+}
+
+form h2 {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+}
+
+form h2 a {
+    color: #008FAE;
+    text-decoration: none;
+
+}
+
+.label_input label h1 {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    margin-bottom: 0.3vw;
+}
+
+.label_input input {
+    width: 100%;
+    height: 4vw;
+    text-align: left;
+    border: 1px solid #808080;
+    border-radius: 8px;
+    padding: 0.5vw;
+}
+
+.capa {
+    margin-bottom: 0vw;
+}
+
+.capa input {
+    width: 12vw;
+    height: 2vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.capa input button {
+    background-color: red;
+}
+
+.preview {
+    width: 12vw;
+    height: 15.1vw;
+    border: 1px solid #808080;
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.preview img {
+    width: 11vw;
+    height: 14.4vw;
+    border: none;
+    border-radius: 0.2vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0.3vw;
+}
+
+#envio {
+    display: flex;
+    justify-content: end;
+    margin-top: 1vw;
+}
+
+button {
+    width: 10vw;
+    margin-top: 10px;
+    background-color: #d9d9d9;
+    height: 2.5vw;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.2vw;
+    font-weight: lighter;
+}
+
+button:hover {
+    background-color: #46d7ac;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+.form-group {
+    min-height: 23vw;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 1vw;
+}
+
+@media (max-width: 800px) {
+    #logo_nome {
+        width: 70vw;
+        margin: 10vw;
+    }
+
+    .formulario {
+        width: 80%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        padding: 4vw;
+        padding-top: 3vw;
+        border-radius: 12px;
+        border: 3px solid #868686;
+        margin-bottom: 8%;
+
+    }
+
+    .formulario p {
+        font-size: 7vw;
+        text-align: start;
+        width: 100%;
+        margin-bottom: 2vw;
+        font-family: 'Inter', sans-serif;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    form h2 {
+        text-align: left;
+        font-family: 'Inter', sans-serif;
+        font-weight: lighter;
+        font-size: 4vw;
+    }
+
+    form h2 a {
+        color: #008FAE;
+        text-decoration: none;
+        font-size: 4vw;
+    }
+
+    .label_input label h1 {
+        text-align: left;
+        font-family: 'Inter', sans-serif;
+        font-weight: lighter;
+        margin-bottom: 1.5vw;
+        font-size: 4vw;
+    }
+
+    .label_input input {
+        width: 60vw;
+        height: 10vw;
+        font-size: 3vw;
+        text-align: left;
+        border: 1px solid #808080;
+        border-radius: 6px;
+        padding: 0.5vw;
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+    }
+
+    .termos input {
+        width: 6vw;
+        height: 6vw;
+        border: none;
+        border-radius: 2vw;
+    }
+
+    .termos h1 {
+        width: fit-content;
+        font-family: 'Inter', sans-serif;
+        font-size: 3.8vw;
+        font-weight: lighter;
+        margin-left: 2vw;
+    }
+
+    button {
+        width: 60vw;
+        margin-top: 1vw;
+        background-color: #d9d9d9;
+        height: 12vw;
+        text-align: center;
+        border-radius: 8px;
+        border: none;
+        font-size: 6vw;
+        font-weight: lighter;
+    }
+
+    .preview {
+        width: 60vw;
+        height: 20%;
+        border: 1px solid #808080;
+        border-top: none;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    
+    .preview img {
+        width: 90%;
+        height: 70vw;
+        border: none;
+        border-radius: 0.2vw;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 2vw;
+    }
+    
+
+
+
+    button:hover {
+        background-color: #d9d9d9;
+        color: black;
+    }
+
+    button:active {
+        background-color: #46d7ac;
+        color: white;
+    }
+}
