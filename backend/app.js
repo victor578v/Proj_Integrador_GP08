@@ -1,10 +1,17 @@
 import express from "express";
 import knexdb from "./knexfile.js";
 import cors from "cors";
+import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
+const usuarios = [
+    { email: 'user@example.com', senha: 'password123' }
+];
+
+app.use(bodyParser.json());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 
@@ -39,33 +46,59 @@ app.get("/livros/mais-vendidos", async (req, res) => {
     }
 });
 
-// app.get("/tipo/:id", async (req, res) => {
-//     const { id } = req.params;
-//     const tipo = await knexdb("tipo").select("*").where({ id });
-//     res.status(200).json({tipo});
-// }
-// );
+app.post("/usuarios", async (req, res) => {
+    const { nome, email, telefone, senha } = req.body;
 
-// app.post("/tipo", async (req, res) => {
-//     const { descricao } = req.body;
-//     await knexdb("tipo").insert({ descricao });
-//     res.status(201).send(`Tipo ${descricao} criado com sucesso!`);
-// }
-// );
+    try {
+        await knexdb('usuario').insert({
+            nome,
+            email,
+            telefone,
+            senha, // Em produção, a senha deve ser criptografada
+            cargo: 2 // Usuário comum
+        })
 
-// app.get("/viwer", async (req, res) => {
-//     const viwer = await knexdb("viweeers").select("*")
-//     .innerJoin("tipo", "viweeers.tipo_id", "=", "tipo.id")
-//     res.status(200).json({viwer});
-// }
-// );
+        res.status(201).json({ message: "Usuário criado com sucesso"});
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Erro ao criar usuário" });
+    }
+});
 
-// app.post("/viwer", async (req, res) => {
-//     const { nome, nick, moderador,sub, tipo_id, foto } = req.body;
-//     await knexdb("viweeers").insert({ nome, nick, moderador,sub, tipo_id, foto });
-//     res.status(201).send(`Viwer ${nome} criado com sucesso!`);
-// }
-// );
+app.get('/usuarios/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const usuario = await knexdb('usuario').where({ idUsuario: id }).first();
+
+        if (usuario) {
+            res.json({ success: true, user: { nome: usuario.nome, email: usuario.email, cargo: usuario.cargo } });
+        } else {
+            res.json({ success: false, message: 'Usuário não encontrado.' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Erro ao buscar informações do usuário' });
+    }
+});
+
+app.post('/login', async (req, res) => {
+    const { email, senha } = req.body;
+
+    try {
+        const usuario = await knexdb('usuario').where({ email, senha }).first();
+
+        if (usuario) {
+            res.json({ success: true, user: { id: usuario.idUsuario } });
+        } else {
+            res.json({ success: false, message: 'E-mail ou senha incorretos.' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Erro ao verificar credenciais' });
+    }
+});
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
