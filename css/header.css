@@ -73,6 +73,10 @@
     gap: 4vw;
 }
 
+.conta a {
+    width: fit-content;
+}
+
 #entrar {
     width: fit-content;
     border: none;
@@ -95,6 +99,34 @@
 }
 
 #cadastrar:hover {
+    background-color: #46d7ac;
+    color: gainsboro;
+}
+
+.usuario {
+    width: 15%;
+    display: none;
+    justify-content:end;
+    margin-right: 4vw;
+    gap: 1vw;
+}
+
+.usuario h1 {
+    width: fit-content;
+    font-size: 1    vw;
+    font-weight: lighter;
+}
+
+.usuario button {
+    width: fit-content;
+    border: none;
+    border-radius: 8px;
+    background-color: gainsboro;
+    padding: 0.6vw;
+    cursor: pointer;
+}
+
+.usuario button:hover{
     background-color: #46d7ac;
     color: gainsboro;
 }
@@ -186,6 +218,25 @@
         display: none;
     }
 
+    .usuario {
+        width: 15%;
+        display: none;
+        justify-content:center;
+        margin-right: 2vw;
+        gap: 1vw;
+    }
+    
+    .usuario h1 {
+        width: fit-content;
+        font-size: 5vw;
+        font-weight: lighter;
+    }
+    
+    .usuario button {
+        display: none;
+    }
+    
+
     .navbar ul {
         flex-direction: column;
         gap: 2vw;
@@ -200,4 +251,6 @@
     .navbar ul li a {
         font-size: 4vw;
     }
+
+    
 }

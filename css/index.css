@@ -95,12 +95,12 @@
 
 }
 
-.titulo h2:hover {
+.titulo h2 a:hover {
     color: grey;
 }
 
 .cards {
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: space-around;
     background-color: #f6f6f6;
@@ -194,13 +194,28 @@
     margin: auto;
     width: fit-content;
     justify-content: center;
-    gap: 15vw;
+    gap: 5vw;
+    margin-top: 1vw;
+}
+
+.inputs button {
+    width: 24vw;
+    padding: 1vw;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    border: black 1px solid;
+}
+
+.inputs button:hover {
+    color: #f9f9f9;
+    background-color: #46d7ac;
+    cursor: pointer;
 }
 
 .inputs input {
     width: 24vw;
     text-align: left;
-    margin-top: 1vw;
     border: black 1px solid;
     border-radius: 10px;
     padding: 1vw;
@@ -229,7 +244,7 @@
         font-family: 'Inter', sans-serif;
     }
 
-    .titulo h2 {
+    .titulo h2 a {
         width: fit-content;
         font-size: 4vw;
         cursor: pointer;
@@ -342,9 +357,15 @@
         gap: 1vw;
     }
 
+    .inputs button{
+        width: 75vw;
+        padding: 2vw;
+        font-size: 3.5vw;
+    }
+
     .inputs input {
         width: 75vw;
-        text-align: left;
+        text-align: center;
         margin-top: 1vw;
         font-size: 3.5vw;
         border-radius: 10px;

@@ -1,21 +1,41 @@
-const burger_menu = document.querySelector("#burger_menu");
-const navbar = document.querySelector("#navbar");
 let currentSlide = 0;
 let slideInterval = setInterval(nextSlide, 5000);
+let assinatura = document.getElementById('assina')
 
-burger_menu.addEventListener("click", () => {
-    if (navbar.classList.contains("mostra")) {
-        navbar.classList.remove("mostra");
-        setTimeout(() => {
-            navbar.style.display = "none";
-        }, 500);
-    } else {
-        navbar.style.display = "block";
-        setTimeout(() => {
-            navbar.classList.add("mostra");
-        }, 10);
+function checaAssinatura(event) {
+    if (event) {
+        event.preventDefault();
     }
-});
+    
+    const nome = document.getElementById('nome');
+    const email = document.getElementById('email');
+
+    nome.setCustomValidity('');
+    email.setCustomValidity('');
+
+    if (!nome.value.trim()) {
+        nome.setCustomValidity('Por favor, digite seu nome.');
+    }
+
+    if (!email.value.trim()) {
+        email.setCustomValidity('Por favor, digite seu e-mail.');
+    } else if (!validateEmail(email.value)) {
+        email.setCustomValidity('Por favor, digite um e-mail válido.');
+    }
+
+    if (nome.checkValidity() && email.checkValidity()) {
+        alert('Obrigado por assinar nossa newsletter!');
+        assinatura.style.display = 'none'
+    } else {
+        nome.reportValidity();
+        email.reportValidity();
+    }
+}
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.carousel-item');

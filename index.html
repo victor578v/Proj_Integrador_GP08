@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
     <script defer src="script/script.js"></script>
+    <script defer src="script/navbar.js"></script>
     <title>NewWay Livros</title>
 </head>
 
@@ -18,28 +19,36 @@
     <header class="header">
         <div class="burger_logo">
             <i class="bi bi-list icone_burger" id="burger_menu"></i>
-            <div class="logo_nome" href="index.html">
-                <img src="img/logo 3 real.png" class="logo" alt="logo">
-                <div class="nome">
-                    <h1>NewWay</h1>
-                    <h1>Biblioteca</h1>
+            <a href="index.html">
+                <div class="logo_nome" href="index.html">
+                    <img src="img/logo 3 real.png" class="logo" alt="logo">
+                    <div class="nome">
+                        <h1>NewWay</h1>
+                        <h1>Biblioteca</h1>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         <form action="/search" method="GET" class="caixa_pesquisa">
             <input type="text" name="query">
             <button type="submit"><i class="bi bi-search" id="pesquisa_icone"></i></button>
         </form>
-        <div class="conta">
-            <button id="entrar">Entrar</button>
+        <div class="conta" id="conta">
+            <a href="login.html"><button id="entrar">Entrar</button></a>
             <a href="cadastro.html"><button id="cadastrar">Cadastrar-se</button></a>
+        </div>
+        <div class="usuario" id="usuario">
         </div>
     </header>
     <nav class="navbar" id="navbar">
         <ul>
-            <li class="conta_responsivo"><a href=".html">Entrar</a></li>
-            <hr class="conta_responsivo">
-            <li class="conta_responsivo"><a href="cadastro.html">Cadastrar-se</a></li>
+            <div id="usuario2">
+                <li class="conta_responsivo"><a href="login.html">Entrar</a></li>
+                <hr class="conta_responsivo">
+                <li class="conta_responsivo"><a href="cadastro.html">Cadastrar-se</a></li>
+                <hr class="conta_responsivo">
+            </div>
+            <li class="conta_responsivo"><a onclick="logout()">Logout</a></li>
             <hr class="conta_responsivo">
             <li><a href="sobre.html">Sobre</a></li>
             <hr class="conta_responsivo">
@@ -81,7 +90,7 @@
     <section class="livros">
         <div class="titulo">
             <h1>Mais Vendidos</h1>
-            <h2>Ver Todos</h2>
+            <h2><a href="livros.html">Ver Todos</a></h2>
         </div>
         <div class="cards" id="mais_vendidos">
 
@@ -90,7 +99,7 @@
 
         <div class="titulo">
             <h1>Lancamentos</h1>
-            <h2>Ver Todos</h2>
+            <h2><a href="livros.html">Ver Todos</a></h2>
         </div>
         <div class="cards" id="lancamentos">
 
@@ -98,20 +107,21 @@
 
         <div class="titulo">
             <h1>Infantil</h1>
-            <h2>Ver Todos</h2>
+            <h2><a href="livros.html">Ver Todos</a></h2>
         </div>
         <div class="cards" id="infantil">
 
         </div>
     </section>
 
-    <section class="assina">
+    <section class="assina" id="assina">
         <h1>OFERTAS E NOVIDADES</h1>
         <p>Assine nossa newsletter e receba nossas novidades e lançamentos com exclusividade.</p>
-        <div class="inputs">
-            <input type="text" placeholder="Digite seu nome">
-            <input type="email" placeholder="Digite seu email">
-        </div>
+        <form class="inputs" id="subscriptionForm">
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <button type="button" onclick="checaAssinatura()">Assinar</button>
+            <input type="email" id="email" placeholder="Digite seu email" required>
+        </form>
     </section>
 
     <footer>

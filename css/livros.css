@@ -1,0 +1,224 @@
+.livros {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+}
+
+.titulo {
+    width: 93%;
+    display: flex;
+    justify-content: left;
+    margin-top: 3.5vw;
+}
+
+.titulo h1 {
+    font-size: 1.5vw;
+    font-weight: lighter;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.titulo a {
+    width: fit-content;
+}
+
+.titulo button {
+    width: 10vw;
+    height: 2vw;
+    border: none;
+    border-radius: 8px;
+    background-color: gainsboro;
+}
+
+.titulo button:hover {
+    background-color: #46d7ac;
+    color: #f6f6f6;
+}
+
+.titulo h2:hover {
+    color: grey;
+}
+
+.cards {
+    width: 93%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    padding: 1.5vw;
+    padding-right: 0.8vw;
+    padding-left: 0.8vw;
+    border: none;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 15%;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding: 1vw;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1vw;
+}
+
+.card:hover {
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+.card img {
+    width: 12vw;
+    height: 16vw;
+    border: none;
+    border-radius: 0.1vw;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+.card h1 {
+    text-align: left;
+    margin: 0.2vw;
+    margin-top: 0.5vw;
+    margin-bottom: 0.8vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    min-height: 2.2vw;
+    max-height: 2.2vw;
+}
+
+.card h2 {
+    text-align: left;
+    margin: 0.2vw;
+    font-family: 'Inter', sans-serif;
+}
+
+.card h3 {
+    margin: 0.2vw;
+    text-align: left;
+    font-size: 0.6vw;
+    color: grey;
+    font-weight: lighter;
+}
+
+.card button {
+    width: 80%;
+    border: none;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    padding: 0.8vw;
+    margin-top: 0.3vw;
+    font-family: 'Inter', sans-serif;
+}
+
+.card button:hover {
+    color: #f9f9f9;
+    background-color: #46d7ac;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .livros {
+        gap: 3vw;
+    }
+
+    .titulo {
+        display: flex;
+    }
+
+    .titulo h1 {
+        font-size: 4vw;
+        font-weight: lighter;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .titulo a {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .titulo button {
+        width: 25vw;
+        height: 8vw;
+        font-size: 3vw;
+    }
+
+    .cards {
+        width: 95%;
+        overflow: hidden;
+        overflow-x: scroll;
+        padding-top: 3vw;
+        padding-bottom: 4vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        gap: 3vw;
+    }
+
+    .card {
+        width: 55%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+
+    .card h1 {
+        white-space: wrap;
+        min-height: 10vw;
+    }
+
+    .cards::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .cards::-webkit-scrollbar-thumb {
+        background-color: grey;
+        border-radius: 5px;
+    }
+
+    .cards img {
+        width: 40vw;
+        height: 60vw;
+    }
+
+    .card:hover {
+        background-color: gainsboro;
+    }
+
+    .card:active {
+        background-color: gainsboro;
+    }
+
+    .card h1 {
+        font-size: 4vw;
+        margin: 1vw;
+        margin-bottom: 2vw;
+    }
+
+    .card h2 {
+        font-size: 3vw;
+        margin: 1vw;
+    }
+
+    .card h3 {
+        margin: 1vw;
+        font-size: 2.5vw;
+    }
+
+    .card button {
+        padding: 2vw;
+        margin-top: 1vw;
+        font-size: 4vw;
+    }
+
+    .card button:hover {
+        color: black;
+        background-color: #d9d9d9;
+    }
+
+    .card button:active {
+        background-color: #46d7ac;
+        color: #f6f6f6;
+    }
+}
