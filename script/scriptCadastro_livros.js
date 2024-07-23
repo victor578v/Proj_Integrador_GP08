@@ -98,7 +98,7 @@ livroForm.addEventListener("submit", async (event) => {
         const dataPublicacao = document.getElementById("dataPublicacao").value;
         const Categoria_idCategoria = document.getElementById("categoria").value;
         const imagemUrl = document.getElementById("capaUrl").value;
-        const descricao = document.getElementById("capaUrl").value;
+        const descricao = document.getElementById("descricao").value;
 
         const livro = {
             titulo,
