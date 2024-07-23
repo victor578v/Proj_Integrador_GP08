@@ -1,0 +1,211 @@
+section {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-imagem {
+    width: 50%;
+    border: grey 1px solid;
+    border-radius: 1vw;
+}
+
+.container-imagem img {
+    width: 20vw;
+    height: 30vw;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    height: 30vw;
+    margin: 1vw;
+    margin-left: 5vw;
+}
+
+.informacoes p {
+    text-align: left;
+    margin-bottom: 1vw;
+    color: grey;
+}
+
+.informacoes h1 {
+    font-size: 2.5vw;
+    text-align: left;
+}
+
+.preco_botao {
+    display: flex;
+    justify-content: space-around;
+}
+
+.preco_botao button {
+    border: none;
+    background-color: #d9d9d9;
+    width: 15vw;
+    height: 3vw;
+    border-radius: 0.4vw;
+}
+
+.preco_botao button:hover {
+    background-color: #46d7ac;
+    color: white;
+    cursor: pointer;
+}
+
+.preco h2 {
+    font-size: 2vw;
+    text-align: left;
+}
+
+.preco h3 {
+    font-size: 0.8vw;
+    color: grey;
+    font-weight: lighter;
+    text-align: left;
+}
+
+h4 {
+    text-align: left;
+    font-size: 1.2vw;
+    font-weight: lighter;
+}
+
+#excluirBtn {
+    margin-left: 2vw;
+
+}
+
+#excluirBtn:hover {
+    background-color: brown;
+}
+
+@media (max-width: 800px) {
+    section {
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-imagem {
+        width: 70%;
+        padding: 2vw;
+        border: grey 1px solid;
+        border-radius: 1vw;
+    }
+
+    .container-imagem img {
+        width: 60vw;
+        height: 80vw;
+    }
+
+    .informacoes {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        height: 80vw;
+        margin: 1vw;
+        margin-left: 0vw;
+        margin-bottom: 1vw;
+    }
+
+    .informacoes p {
+        text-align: center;
+        margin-bottom: 1vw;
+        color: grey;
+        font-size: 4vw;
+    }
+
+    .informacoes h1 {
+        width: 80vw;
+        font-size: 7vw;
+        text-align: center;
+    }
+
+
+    .preco_botao {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        gap: 4vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .preco_botao button {
+        border: none;
+        background-color: #d9d9d9;
+        width: 60vw;
+        height: 12vw;
+        border-radius: 2vw;
+        font-size: 4vw;
+    }
+
+    .preco_botao button:active {
+        background-color: #46d7ac;
+        color: white;
+        cursor: pointer;
+    }
+
+    .preco_botao button:hover {
+        background-color: #d9d9d9;
+        color: black;
+        cursor: pointer;
+    }
+
+    .preco {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        width: fit-content;
+    }
+
+    .preco h2 {
+        width: fit-content;
+        font-size: 8vw;
+        text-align: left;
+    }
+
+    .preco h3 {
+        width: fit-content;
+        font-size: 4vw;
+        color: grey;
+        font-weight: lighter;
+        text-align: left;
+    }
+
+    h4 {
+        margin-top: 2vw;
+        text-align: center;
+        font-size: 4vw;
+        font-weight: lighter;
+    }
+
+    #excluirBtn {
+        margin-left: 0vw;
+    
+    }
+    
+    #excluirBtn:hover {
+        background-color: #d9d9d9;
+    }
+
+    #excluirBtn:active {
+        background-color: #d9d9d9;
+    }
+}

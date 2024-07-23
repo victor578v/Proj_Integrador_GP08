@@ -82,13 +82,24 @@ form h2 a {
     padding: 0.5vw;
 }
 
+.label_input textarea {
+    width: 15vw;
+    height: 16.9vw;
+    text-align: left;
+    border: 1px solid #808080;
+    border-radius: 8px;
+    font-size: 0.8vw;
+    padding: 0.5vw;
+    resize: none;
+}
+
 .capa {
     margin-bottom: 0vw;
 }
 
 .capa input {
     width: 12vw;
-    height: 2vw;
+    height: 1.7vw;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     font-size: 0.8vw;
@@ -143,7 +154,7 @@ button:hover {
 }
 
 .form-group {
-    min-height: 23vw;
+    min-height: 24vw;
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -231,6 +242,11 @@ button:hover {
         margin-left: 2vw;
     }
 
+    .capa input {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
     button {
         width: 60vw;
         margin-top: 1vw;
@@ -245,7 +261,7 @@ button:hover {
 
     .preview {
         width: 60vw;
-        height: 20%;
+        height: 80vw;
         border: 1px solid #808080;
         border-top: none;
         border-bottom-left-radius: 8px;
@@ -261,7 +277,37 @@ button:hover {
         margin: 2vw;
     }
     
+    .label_input select {
+        width: 60vw;
+        height: 10vw;
+        text-align: left;
+        border: 1px solid #808080;
+        border-radius: 8px;
+        font-size: 3vw;
+        padding: 0.5vw;
+    }
 
+        
+    .label_input select option {
+        width: 60vw;
+        height: 10vw;
+        text-align: left;
+        border: 1px solid #808080;
+        border-radius: 8px;
+        font-size: 3vw;
+        padding: 0.5vw;
+    }
+
+    .label_input textarea {
+        width: 60vw;
+        height: 30vw;
+        text-align: left;
+        border: 1px solid #808080;
+        border-radius: 8px;
+        font-size: 3vw;
+        padding: 1vw;
+        resize: none;
+    }
 
 
     button:hover {

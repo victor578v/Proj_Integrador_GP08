@@ -1,9 +1,6 @@
-// Seleciona o input de URL
 const inputUrl = document.getElementById('capaUrl');
-// Seleciona o elemento de preview da imagem
 const previewImg = document.getElementById('capaPreview');
 
-// Função para validar se a URL é válida
 function isValidUrl(url) {
     try {
         new URL(url);
@@ -13,16 +10,13 @@ function isValidUrl(url) {
     }
 }
 
-// Adiciona um ouvinte de evento para o input de URL
-inputUrl.addEventListener('input', function() {
+inputUrl.addEventListener('input', function () {
     const url = inputUrl.value;
 
     if (url && isValidUrl(url)) {
-        // Atualiza o src da imagem de preview com o valor do input de URL
         previewImg.src = url;
         previewImg.style.display = 'block';
     } else {
-        // Oculta a imagem de preview se a URL for inválida ou vazia
         previewImg.style.display = 'none';
     }
 });
@@ -35,6 +29,7 @@ async function validarFormularioLivro() {
     const dataPublicacao = document.getElementById("dataPublicacao");
     const Categoria_idCategoria = document.getElementById("categoria");
     const imagemUrl = document.getElementById("capaUrl");
+    const descricao = document.getElementById("descricao");
 
     titulo.setCustomValidity('');
     autor.setCustomValidity('');
@@ -43,6 +38,7 @@ async function validarFormularioLivro() {
     dataPublicacao.setCustomValidity('');
     Categoria_idCategoria.setCustomValidity('');
     imagemUrl.setCustomValidity('');
+    descricao.setCustomValidity('');
 
     let formIsValid = true;
 
@@ -81,6 +77,12 @@ async function validarFormularioLivro() {
         formIsValid = false;
     }
 
+
+    if (!descricao.value.trim()) {
+        descricao.setCustomValidity('Por favor, digite uma descricao para o livro.');
+        formIsValid = false;
+    }
+
     return formIsValid;
 }
 
@@ -96,6 +98,7 @@ livroForm.addEventListener("submit", async (event) => {
         const dataPublicacao = document.getElementById("dataPublicacao").value;
         const Categoria_idCategoria = document.getElementById("categoria").value;
         const imagemUrl = document.getElementById("capaUrl").value;
+        const descricao = document.getElementById("capaUrl").value;
 
         const livro = {
             titulo,
@@ -104,7 +107,8 @@ livroForm.addEventListener("submit", async (event) => {
             preco,
             dataPublicacao,
             Categoria_idCategoria,
-            imagemUrl
+            imagemUrl,
+            descricao
         };
 
         try {
@@ -119,7 +123,6 @@ livroForm.addEventListener("submit", async (event) => {
             if (response.ok) {
                 alert('Livro cadastrado com sucesso!');
                 livroForm.reset();
-                // Redirecionar ou atualizar a página conforme necessário
             } else {
                 const errorData = await response.json();
                 console.error('Falha ao enviar dados:', errorData.error);
@@ -128,7 +131,6 @@ livroForm.addEventListener("submit", async (event) => {
             console.error('Erro ao enviar dados:', error);
         }
     } else {
-        // Exibe as mensagens de erro personalizadas
         const titulo = document.getElementById("titulo");
         const autor = document.getElementById("autor");
         const isbn = document.getElementById("isbn");
@@ -136,6 +138,7 @@ livroForm.addEventListener("submit", async (event) => {
         const dataPublicacao = document.getElementById("dataPublicacao");
         const Categoria_idCategoria = document.getElementById("Categoria_idCategoria");
         const imagemUrl = document.getElementById("imagemUrl");
+        const descricao = document.getElementById("descricao");
 
         titulo.reportValidity();
         autor.reportValidity();
@@ -144,6 +147,7 @@ livroForm.addEventListener("submit", async (event) => {
         dataPublicacao.reportValidity();
         Categoria_idCategoria.reportValidity();
         imagemUrl.reportValidity();
+        descricao.reportValidity();
     }
 });
 
@@ -167,6 +171,5 @@ async function carregaCategorias() {
     }
 }
 
-// Chama a função para carregar as categorias quando a página for carregada
 document.addEventListener("DOMContentLoaded", carregaCategorias);
 

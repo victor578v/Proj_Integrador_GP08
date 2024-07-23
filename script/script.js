@@ -6,7 +6,7 @@ function checaAssinatura(event) {
     if (event) {
         event.preventDefault();
     }
-    
+
     const nome = document.getElementById('nome');
     const email = document.getElementById('email');
 
@@ -97,13 +97,13 @@ async function carregaLivrosMaisVendidos() {
 
     const geradorDeCards = document.getElementById("mais_vendidos");
     geradorDeCards.innerHTML = data.livros.map((livro) => {
-        const imagemSrc = livro.imagemUrl ? livro.imagemUrl : `img/livro${livro.idLivro}.png`;
+        const imagemSrc = livro.urlImagem ? livro.urlImagem : `img/livro${livro.idLivro}.png`;
         return `
-            <div class="card">
+            <div class="card" onclick="redirecionarParaLivro(${livro.idLivro})">
                 <img src="${imagemSrc}" alt="Capa do livro ${livro.titulo}">
                 <h1>${livro.titulo}</h1>
                 <h2>R$ ${livro.preco}</h2>
-                <h3>ou 2x de R$ ${(livro.preco / 2)}</h3>
+                <h3>ou 2x de R$ ${(livro.preco / 2).toFixed(2)}</h3>
                 <button>Comprar</button>
             </div>
         `;
@@ -121,11 +121,11 @@ async function carregaLivrosLancamentos() {
     geradorDeCards.innerHTML = livrosMaisRecentes.map((livro) => {
         const imagemSrc = livro.imagemUrl ? livro.imagemUrl : `img/livro${livro.idLivro}.png`;
         return `
-            <div class="card">
+            <div class="card" onclick="redirecionarParaLivro(${livro.idLivro})">
                 <img src="${imagemSrc}" alt="Capa do livro ${livro.titulo}">
                 <h1>${livro.titulo}</h1>
                 <h2>R$ ${livro.preco}</h2>
-                <h3>ou 2x de R$ ${(livro.preco / 2)}</h3>
+                <h3>ou 2x de R$ ${(livro.preco / 2).toFixed(2)}</h3>
                 <button>Comprar</button>
             </div>
         `;
@@ -143,11 +143,11 @@ async function carregaLivrosInfantil() {
     geradorDeCards.innerHTML = livrosAleatorios.map((livro) => {
         const imagemSrc = livro.imagemUrl ? livro.imagemUrl : `img/livro${livro.idLivro}.png`;
         return `
-            <div class="card">
+            <div class="card" onclick="redirecionarParaLivro(${livro.idLivro})">
                 <img src="${imagemSrc}" alt="Capa do livro ${livro.titulo}">
                 <h1>${livro.titulo}</h1>
                 <h2>R$ ${livro.preco}</h2>
-                <h3>ou 2x de R$ ${(livro.preco / 2)}</h3>
+                <h3>ou 2x de R$ ${(livro.preco / 2).toFixed(2)}</h3>
                 <button>Comprar</button>
             </div>
         `;

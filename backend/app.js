@@ -47,7 +47,7 @@ app.get("/livros/mais-vendidos", async (req, res) => {
 });
 
 app.post('/livros', async (req, res) => {
-    const { titulo, autor, isbn, preco, dataPublicacao, Categoria_idCategoria, imagemUrl } = req.body;
+    const { titulo, autor, isbn, preco, dataPublicacao, Categoria_idCategoria, imagemUrl, descricao } = req.body;
 
     try {
         await knexdb('Livro').insert({
@@ -57,13 +57,47 @@ app.post('/livros', async (req, res) => {
             preco,
             dataPublicacao,
             Categoria_idCategoria,
-            imagemUrl
+            imagemUrl,
+            descricao
         });
 
         res.status(201).json({ message: "Livro cadastrado com sucesso" });
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Erro ao cadastrar livro" });
+    }
+});
+
+app.get('/livros/:id', async (req, res) => {
+    const livroId = parseInt(req.params.id, 10);
+
+    try {
+        if (isNaN(livroId)) {
+            return res.status(400).json({ error: 'ID inválido.' });
+        }
+
+        const livro = await knexdb('livro').where({ idLivro: livroId }).first();
+
+        if (!livro) {
+            return res.status(404).json({ error: 'Livro não encontrado.' });
+        }
+
+        res.json(livro);
+    } catch (error) {
+        console.error('Erro ao buscar o livro:', error);
+        res.status(500).json({ error: 'Erro interno do servidor.' });
+    }
+});
+
+app.delete('/livros/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        await knexdb('Livro').where({ idLivro: id }).del();
+        res.status(200).json({ success: true, message: 'Livro excluído com sucesso.' });
+    } catch (error) {
+        console.error('Erro ao excluir o livro:', error);
+        res.status(500).json({ success: false, message: 'Erro ao excluir o livro.' });
     }
 });
 
@@ -75,11 +109,11 @@ app.post("/usuarios", async (req, res) => {
             nome,
             email,
             telefone,
-            senha, // Em produção, a senha deve ser criptografada
-            cargo: 2 // Usuário comum
+            senha,
+            cargo: 2
         })
 
-        res.status(201).json({ message: "Usuário criado com sucesso"});
+        res.status(201).json({ message: "Usuário criado com sucesso" });
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Erro ao criar usuário" });

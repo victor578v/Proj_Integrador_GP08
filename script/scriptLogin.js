@@ -1,5 +1,5 @@
 document.getElementById("loginForm").addEventListener("submit", async (event) => {
-    event.preventDefault(); // Impede o comportamento padrão do formulário
+    event.preventDefault();
 
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
@@ -7,7 +7,6 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
     const formIsValid = await validarFormulario();
 
     if (formIsValid) {
-        // Enviar os dados para o backend
         try {
             const response = await fetch('http://localhost:3000/login', {
                 method: "POST",
@@ -19,12 +18,11 @@ document.getElementById("loginForm").addEventListener("submit", async (event) =>
 
             if (response.ok) {
                 const result = await response.json();
-                
+
                 if (result.success) {
-                    // Salvar informações de sessão (e.g., token)
-                    localStorage.setItem('user', JSON.stringify(result.user)); // Armazena informações do usuário
+                    localStorage.setItem('user', JSON.stringify(result.user)); 
                     alert('Login realizado com sucesso!');
-                    window.location.href = 'index.html'; // Redireciona após o login
+                    window.location.href = 'index.html';
                 } else {
                     alert(result.message || 'Falha no login');
                 }
@@ -64,7 +62,6 @@ async function validarFormulario() {
 }
 
 function validateEmail(email) {
-    // Função simples para validar o formato do e-mail
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
@@ -73,13 +70,9 @@ function validateEmail(email) {
 function verificarAutenticacao() {
     const user = localStorage.getItem('user');
     if (user) {
-        // Usuário está logado, redirecionar ou mostrar informações
         console.log('Usuário logado:', JSON.parse(user));
     } else {
-        // Usuário não está logado, redirecionar para login
         window.location.href = 'login.html';
     }
 }
 
-// Chame esta função na página protegida
-// verificarAutenticacao();

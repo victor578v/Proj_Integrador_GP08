@@ -12,11 +12,8 @@ async function verificarLogado() {
         const userData = JSON.parse(user);
         console.log('Usuário logado:', userData);
 
-        // Faça uma requisição ao backend para obter as informações do usuário
         const response = await fetch(`http://localhost:3000/usuarios/${userData.id}`);
         const data = await response.json();
-
-        console.log(data)
 
         if (data.success) {
             conta.style.display = 'none';
@@ -34,6 +31,11 @@ async function verificarLogado() {
         logout.style.display = 'none'
     }
 }
+
+function redirecionarParaLivro(idLivro) {
+    window.location.href = `livro.html?id=${idLivro}`;
+}
+
 
 function logout() {
     localStorage.removeItem('user');

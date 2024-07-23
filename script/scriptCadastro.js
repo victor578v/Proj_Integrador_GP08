@@ -16,8 +16,7 @@ async function validarFormulario() {
     termos.setCustomValidity('');
     
     let formIsValid = true;
-    
-    // Validação personalizada
+
     if (!nome.value.trim()) {
         nome.setCustomValidity('Por favor, digite seu nome.');
         formIsValid = false;
@@ -58,7 +57,6 @@ async function validarFormulario() {
         formIsValid = false;
     }
     
-    // Verificar e-mail e telefone já cadastrados
     if (formIsValid) {
         try {
             const usuariosResponse = await fetch('http://localhost:3000/usuarios');
@@ -92,12 +90,10 @@ form.addEventListener("submit", async (event) => {
     event.preventDefault();
     
     if (await validarFormulario()) {
-        // Pegando os valores dos inputs
         const nome = document.getElementById("nome").value;
         const email = document.getElementById("email").value;
         const telefone = document.getElementById("telefone").value;
         const senha = document.getElementById("senha").value;
-        // Montando o objeto com os dados do formulário
         const usuario = {
             nome,
             email,
@@ -127,7 +123,6 @@ form.addEventListener("submit", async (event) => {
             console.error('Erro ao enviar dados:', error);
         }
     } else {
-        // Exibe as mensagens de erro personalizadas
         const nome = document.getElementById('nome');
         const email = document.getElementById('email');
         const telefone = document.getElementById('telefone');
